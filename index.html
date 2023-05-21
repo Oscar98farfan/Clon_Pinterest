@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Clon Pinterest</title>
 </head>
 <body>
     <header>
@@ -27,28 +27,53 @@
     </header>
     <main>
         <section id="grid" class="grid-container">
-            <div class="column-grid"></div>
+            <div class="column-grid">
+
+            </div>
             <div class="column-grid"></div>
             <div class="column-grid"></div>
             <div class="column-grid"></div>
             <div class="column-grid"></div>
         </section>
     </main>
+
     <script>
         var grid = document.getElementById("grid")
         var grid_items = grid.children
         for (let i = 0; i < grid_items.length; i++) {
-            for (let j = 0; j < 6; j++) {
-                var height = Math.floor(Math.random() * (500 - 100 + 1)) + 250;
+            for (let j = 0; j < 5; j++) {
+                // creamos un div con la clase column-grid_container
                 var containerImg = document.createElement("div")
+                containerImg.className = "column-grid_container"
+                // creamos la imagen correspondiente
                 var img = document.createElement("img");
-                
-                img.src = "https://picsum.photos/250/"+height+"?random=" + j;
-                containerImg.appendChild(img)
+                img.src = "https://picsum.photos/250/"+height+"?random="+j;
+                var height = Math.floor(Math.random() * (500 - 100 + 1)) + 250;
                 img.className = "column-grid_img"
+                // creamos elcontenedor de los botones
+                var buttonContainer = document.createElement("div")
+                buttonContainer.className = "button-container"
+                // agregamos loscuatro botones 
+                buttonContainer.appendChild(createButton("oscarF ▼", "username"))
+                buttonContainer.appendChild(createButton("Guardar", "save"))
+                buttonContainer.appendChild(createButton("⏫", "shared"))
+                buttonContainer.appendChild(createButton("💯", "options"))
+                // agregamos la imagen y elcontenedor de los botoens
+                containerImg.appendChild(img)
+                containerImg.appendChild(buttonContainer)
+                
                 grid_items[i].appendChild(containerImg);
             }
         };
+
+
+        function createButton(text, className) {
+            var button = document.createElement("button")
+            button.className = "button-img button-" + className;
+            button.innerHTML = text
+            return button
+        }
+
     </script>
 </body>
 </html>

@@ -50,8 +50,6 @@ li a {
     border: 1px solid #b4b4b4;
     background-color: rgba(194, 190, 190, 0.977);
     font-size: 1.1rem;
-
-
 }
 
 main {
@@ -72,20 +70,43 @@ main {
 }
 
 .column-grid_img {
-    border-radius: 30px;
-    margin: 10px 0;
+    border-radius: 25px;
+    margin: 10px;
+    filter: brightness(80%);
+
 }
-.column-grid_img:hover {
+
+.button-container {
+    border-radius: 25px;
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.477);
+}
+/* Aqui comienza con el Hover */
+
+.column-grid_img:hover ~ .button-container {
+    display: block;
+}
+
+.column-grid_img:hover{
     filter: brightness(25%);
 }
 
-.column-grid_img:hover ~ .button-img {
+
+.button-container:hover {
     display: block;
 }
 
-.button-img {
-    display: block;
+.button-container:hover ~ .column-grid_img {
+    filter: brightness(50%);
 }
+
+
 
 .column-grid_container{
     width: 100%;
@@ -93,7 +114,6 @@ main {
 }
 
 .button-img {
-    display: none;
     margin: 0;
     position: absolute;
     padding: 10px 10px;
@@ -106,7 +126,7 @@ main {
 
 .button-username {
     top: 20px;
-    left: 15px;
+    left: 35px;
 }
 
 .button-save {
@@ -114,19 +134,19 @@ main {
     font-size: large;
     border-radius: 15px;
     top: 20px;
-    right: 20px;
+    right: 40px;
 }
 
 .button-shared {
     border-radius: 50%;
     background-color: gainsboro;
-    bottom: 20px;
-    right: 60px;
+    bottom: 30px;
+    right: 100px;
 }
 
 .button-options {
     border-radius: 50%;
     background-color: gainsboro;
-    bottom: 20px;
-    right: 10px;
+    bottom: 30px;
+    right: 40px;
 }
