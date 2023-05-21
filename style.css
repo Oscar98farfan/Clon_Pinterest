@@ -1,0 +1,76 @@
+main {
+    width: 100%;
+}
+
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+}
+
+.column-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-grid_img {
+    border-radius: 30px;
+    margin: 10px 0;
+}
+.column-grid_img:hover {
+    filter: brightness(25%);
+}
+
+.column-grid_img:hover ~ .button-img {
+    display: block;
+}
+
+.button-img {
+    display: block;
+}
+
+.column-grid_container{
+    width: 100%;
+    position: relative;
+}
+
+.button-img {
+    display: none;
+    margin: 0;
+    position: absolute;
+    padding: 10px 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color:  white;
+}
+
+.button-username {
+    top: 20px;
+    left: 15px;
+}
+
+.button-save {
+    background-color: red;
+    font-size: large;
+    border-radius: 15px;
+    top: 20px;
+    right: 20px;
+}
+
+.button-shared {
+    border-radius: 50%;
+    background-color: gainsboro;
+    bottom: 20px;
+    right: 60px;
+}
+
+.button-options {
+    border-radius: 50%;
+    background-color: gainsboro;
+    bottom: 20px;
+    right: 10px;
+}
