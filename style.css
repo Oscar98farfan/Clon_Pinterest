@@ -166,3 +166,12 @@ main {
     bottom: 30px;
     right: 40px;
 }
+
+@media (max-width: 375px) {
+    .grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    }
+}
