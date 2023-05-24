@@ -42,7 +42,7 @@ nav ul {
 
 li a {
     cursor: pointer;
-    margin: 0 12px 0 12px;
+    margin: 0 10px 0 10px;
     font-size: 1.1rem;
     font-weight: bold;
     color: black;
@@ -55,7 +55,7 @@ li a {
 }
 
 #buscador {
-    width: 60rem;
+    width: 50rem;
     height: 40px;
     border-radius: 100px;
     border: 1px solid #b4b4b4;
@@ -69,11 +69,11 @@ li a {
 }
 
 main {
-    width: 100%;
+    width: 99.9%;
+    justify-items: center;
 }
 
 .grid-container{
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     justify-content: center;
@@ -103,7 +103,7 @@ main {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.477);
 }
-/* Aqui comienza con el Hover */
+/* Aqui comienza con el Hover especial */
 
 .column-grid_img:hover ~ .button-container {
     display: block;
@@ -167,11 +167,108 @@ main {
     right: 40px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 545px) {
     .grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        place-content: center;
     }
+
+    nav {
+        background-color: rgb(255, 255, 255);
+        display: block;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: block;
+        align-items: center;
+    }
+
+    #buscador {
+        width: 15rem;
+    }
+
+    .links, .icono {
+        display: none;
+    }
+
+    #icono-pinterest {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 546px) {
+    .grid-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        place-content: center;
+    }
+
+    nav {
+        background-color: rgb(255, 255, 255);
+        display: block;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: block;
+        margin: 5px;
+        align-items: center;
+    }
+
+    #buscador {
+        width: 100%
+    }
+
+    .links, .icono {
+        display: none;
+    }
+
+    #icono-pinterest {
+        width: 6rem;
+        height: 6rem;
+    }
+
+}
+
+@media (max-width: 1240px) and (min-width: 769px) {
+    .grid-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        place-content: center;
+    }
+
+    nav {
+        background-color: rgb(255, 255, 255);
+        display: inline-block;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        margin: 5px;
+        align-items: center;
+    }
+
+    #buscador {
+        width: 100%
+    }
+
+    /* .links, .icono {
+        display: none;
+    } */
+
+    #icono-pinterest {
+        width: 6rem;
+        height: 6rem;
+    }
+
 }
